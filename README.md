@@ -5,7 +5,7 @@
 
 - Download this repo.
 - Copy the [core.js](assets/js/app/core.js)
-- Look into index.html for the html to include.
+- Look into index.pug for the html to include.
 
 
 ## License

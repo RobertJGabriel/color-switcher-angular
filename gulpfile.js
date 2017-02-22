@@ -75,11 +75,20 @@ gulp.task('thirdParty', function(done) {
 });
 
 
+gulp.task('fonts', function() {
+    gulp.src('./assets/fonts/*').on('error', function(err) {
+            gutil.log(gutil.colors.red(err.message));
+        })
+
+        .pipe(gulp.dest('./dist/fonts/'))
+        .pipe(size());
+
+});
 
 
 
 gulp.task('default',  function(callback) {
-		runSequence('thirdParty', 'sass', 'html', callback);
+		runSequence('thirdParty','fonts', 'sass', 'html', callback);
 });
 
 
